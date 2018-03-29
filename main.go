@@ -2,7 +2,7 @@
 package main
 
 import (
-    "os",
+    "os"
 	"github.com/requilence/integram"
 	"github.com/integram-org/trello"
 	"github.com/integram-org/gitlab"
