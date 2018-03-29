@@ -2,6 +2,7 @@
 package main
 
 import (
+    "os",
 	"github.com/requilence/integram"
 	"github.com/integram-org/trello"
 	"github.com/integram-org/gitlab"
@@ -23,11 +24,11 @@ func main() {
 	integram.Register(
 		gitlab.Config{
 			OAuthProvider: integram.OAuthProvider{
-				ID:     "GITLAB_APP_ID",
-				Secret: "GITLAB_APP_SECRET",
+				ID: os.GetEnv("GITLAB_APP_ID"),
+				Secret: os.GetEnv("GITLAB_APP_SECRET"),
 			},
 		},
-		"BOT_TOKEN_PROVIDED_BY_@BOTFATHER",
+		os.GetEnv("TELEGRAM_BOT_TOKEN"),
 	)
 	integram.Run()
 

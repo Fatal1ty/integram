@@ -29,8 +29,8 @@ type config struct {
 	TGPoolBatchSize int   `envconfig:"INTEGRAM_TG_POOL_BATCH_SIZE" default:"100"` // Number of jobs fetching from Redis at once
 
 	TGPool         int    `envconfig:"INTEGRAM_TG_POOL" default:"10"` // Maximum simultaneously message sending
-	MongoURL       string `envconfig:"INTEGRAM_MONGO_URL" default:"mongodb://localhost:27017/integram"`
-	RedisURL       string `envconfig:"INTEGRAM_REDIS_URL" default:"127.0.0.1:6379"`
+	MongoURL       string `envconfig:"MONGODB_URI" default:"mongodb://localhost:27017/integram"`
+	RedisURL       string `envconfig:"REDIS_URL" default:"127.0.0.1:6379"`
 	Port           string `envconfig:"INTEGRAM_PORT" default:"7000"`
 	Debug          bool   `envconfig:"INTEGRAM_DEBUG" default:"1"`
 	MongoLogging   bool   `envconfig:"INTEGRAM_MONGO_LOGGING" default:"0"`
