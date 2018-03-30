@@ -32,7 +32,7 @@ type config struct {
 	MongoURL       string `envconfig:"MONGODB_URI" default:"mongodb://localhost:27017/integram"`
 	RedisAddress   string `envconfig:"INTEGRAM_REDIS_ADDRESS" default:"127.0.0.1:6379"`
 	RedisPassword  string `envconfig:"INTEGRAM_REDIS_PASSWORD" default:""`
-	Port           string `envconfig:"INTEGRAM_PORT" default:"7000"`
+	Port           string `envconfig:"PORT" default:"7000"`
 	Debug          bool   `envconfig:"INTEGRAM_DEBUG" default:"1"`
 	MongoLogging   bool   `envconfig:"INTEGRAM_MONGO_LOGGING" default:"0"`
 	MongoStatistic bool   `envconfig:"INTEGRAM_MONGO_STATISTIC" default:"0"`
