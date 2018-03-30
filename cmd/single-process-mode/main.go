@@ -12,13 +12,13 @@ import (
 func main() {
 
 	// You can fetch secrets from the ENV vars
-	var trelloConfig trello.Config
-	envconfig.MustProcess("TRELLO", &trelloConfig)
+	// var trelloConfig trello.Config
+	// envconfig.MustProcess("TRELLO", &trelloConfig)
 
-	integram.Register(
-		trelloConfig,
-		trelloConfig.BotConfig.Token,
-	)
+	// integram.Register(
+	// 	trelloConfig,
+	// 	trelloConfig.BotConfig.Token,
+	// )
 
 	// or just specify them directly
 	integram.Register(
