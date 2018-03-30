@@ -202,8 +202,8 @@ func healthCheck(db *mgo.Database) error {
 
 func init() {
 
-	jobs.Config.Db.Address = Config.RedisURL
-	jobs.Config.Db.Password = os.Getenv("REDIS_PASSWORD")
+	jobs.Config.Db.Address = Config.RedisAddress
+	jobs.Config.Db.Password = COnfig.RedisPassword
 	if Config.IsMainInstance() {
 		err := loadStandAloneServicesFromFile()
 		if err != nil {

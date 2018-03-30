@@ -30,7 +30,8 @@ type config struct {
 
 	TGPool         int    `envconfig:"INTEGRAM_TG_POOL" default:"10"` // Maximum simultaneously message sending
 	MongoURL       string `envconfig:"MONGODB_URI" default:"mongodb://localhost:27017/integram"`
-	RedisURL       string `envconfig:"REDIS_URL" default:"127.0.0.1:6379"`
+	RedisAddress   string `envconfig:"INTEGRAM_REDIS_ADDRESS" default:"127.0.0.1:6379"`
+	RedisPassword  string `envconfig:"INTEGRAM_REDIS_PASSWORD" default:""`
 	Port           string `envconfig:"INTEGRAM_PORT" default:"7000"`
 	Debug          bool   `envconfig:"INTEGRAM_DEBUG" default:"1"`
 	MongoLogging   bool   `envconfig:"INTEGRAM_MONGO_LOGGING" default:"0"`
