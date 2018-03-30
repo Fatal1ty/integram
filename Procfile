@@ -1,0 +1,1 @@
+web: single-process-mode
