@@ -9,7 +9,7 @@
 
 package main
 
-import "github.com/Fatal1ty/integram"
+import "github.com/requilence/integram"
 
 
 func main(){
