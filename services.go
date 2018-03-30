@@ -203,7 +203,7 @@ func healthCheck(db *mgo.Database) error {
 func init() {
 
 	jobs.Config.Db.Address = Config.RedisURL
-	jobs.Config.Db.Password = os.Getenv('REDIS_PASSWORD')
+	jobs.Config.Db.Password = os.Getenv("REDIS_PASSWORD")
 	if Config.IsMainInstance() {
 		err := loadStandAloneServicesFromFile()
 		if err != nil {
@@ -364,13 +364,13 @@ func (s *Service) getShortFuncPath(actionFunc interface{}) string {
 
 func (s *Service) trimFuncPath(fullPath string) string{
 	// Trim funcPath for a specific service name and determined service's rootPackagePath
-	// trello, github.com/requilence/integram/services/trello, github.com/requilence/integram/services/trello.cardReplied -> trello.cardReplied
-	// trello, github.com/requilence/integram/services/Trello, github.com/requilence/integram/services/Trello.cardReplied -> trello.cardReplied
+	// trello, github.com/Fatal1ty/integram/services/trello, github.com/Fatal1ty/integram/services/trello.cardReplied -> trello.cardReplied
+	// trello, github.com/Fatal1ty/integram/services/Trello, github.com/Fatal1ty/integram/services/Trello.cardReplied -> trello.cardReplied
 	// trello, github.com/requilence/trelloRepo, _/var/integram/trello.cardReplied -> trello.cardReplied
 	// trello, github.com/requilence/trelloRepo, _/var/integram/another.cardReplied -> trello.cardReplied
-	// trello, github.com/requilence/integram/services/trello, github.com/requilence/integram/services/trello/another.action -> trello/another.action
-	// trello, github.com/requilence/integram/services/trello, _/var/integram/trello.cardReplied -> trello.cardReplied
-	// trello, trello.cardReplied, github.com/requilence/integram/services/trello.cardReplied -> trello.cardReplied
+	// trello, github.com/Fatal1ty/integram/services/trello, github.com/Fatal1ty/integram/services/trello/another.action -> trello/another.action
+	// trello, github.com/Fatal1ty/integram/services/trello, _/var/integram/trello.cardReplied -> trello.cardReplied
+	// trello, trello.cardReplied, github.com/Fatal1ty/integram/services/trello.cardReplied -> trello.cardReplied
 	if s.rootPackagePath != "" && strings.HasPrefix(fullPath, s.rootPackagePath) {
 		internalFuncPath := strings.TrimPrefix(fullPath, s.rootPackagePath)
 		return s.Name + internalFuncPath

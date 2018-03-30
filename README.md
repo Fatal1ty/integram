@@ -5,7 +5,7 @@ Framework and platform to integrate services with [Telegram](https://telegram.or
 
 ℹ️ Individual integration repos are located at https://github.com/integram-org.
 
-[![CircleCI](https://img.shields.io/circleci/project/requilence/integram.svg)](https://circleci.com/gh/requilence/integram) [![Docker Image](https://img.shields.io/docker/build/integram/integram.svg)](https://hub.docker.com/r/integram/integram/) [![GoDoc](https://godoc.org/github.com/Requilence/integram?status.svg)](https://godoc.org/github.com/requilence/integram)
+[![CircleCI](https://img.shields.io/circleci/project/requilence/integram.svg)](https://circleci.com/gh/requilence/integram) [![Docker Image](https://img.shields.io/docker/build/integram/integram.svg)](https://hub.docker.com/r/integram/integram/) [![GoDoc](https://godoc.org/github.com/Fatal1ty/integram?status.svg)](https://godoc.org/github.com/Fatal1ty/integram)
 
 ![Screencast](https://st.integram.org/img/screencast4.gif)
 
@@ -31,7 +31,7 @@ How to host Integram on your own server (using your private bots)
     - Create your Telegram bot(s) by talking to [@BotFather](https://t.me/botfather)
 - Clone the repo:
 ```bash
-   git clone https://github.com/requilence/integram && cd integram
+   git clone https://github.com/Fatal1ty/integram && cd integram
 ```
 - Check the `docker-compose.yml` file for the required ENV vars for each service
     - E.g. in order to run the Trello integration you will need to export: 
@@ -85,7 +85,7 @@ How to host Integram on your own server (using your private bots)
 ------------------
 - First you need to install all requirements: [Go 1.9+](https://golang.org/doc/install), [Go dep](https://github.com/golang/dep#setup), [MongoDB 3.4+ (for data)](https://docs.mongodb.com/manual/administration/install-community/), [Redis 3.2+ (for jobs queue)](https://redis.io/download)
 
-- Then, using [this template](https://github.com/requilence/integram/blob/master/cmd/single-process-mode/main.go) 
+- Then, using [this template](https://github.com/Fatal1ty/integram/blob/master/cmd/single-process-mode/main.go) 
  create the `main.go` file and put it in `src/integram/` inside your preferred working directory (e.g. `/var/integram/src/integram/main.go`)
 
 ```bash
@@ -97,7 +97,7 @@ How to host Integram on your own server (using your private bots)
     dep init
 ```
 
-- Specify the required ENV variables – check the [Docker way section](https://github.com/requilence/integram#-docker-way)
+- Specify the required ENV variables – check the [Docker way section](https://github.com/Fatal1ty/integram#-docker-way)
 - Run it
 ```bash
     go build integram && ./integram
@@ -121,6 +121,6 @@ Feel free to send PRs. If you want to contribute new service integrations, pleas
 
 
 ### License
-Code licensed under GPLV3 [license](https://github.com/requilence/integram/blob/master/LICENSE)
+Code licensed under GPLV3 [license](https://github.com/Fatal1ty/integram/blob/master/LICENSE)
 
 ![Analytics](https://ga-beacon.appspot.com/UA-80266491-1/github_readme)

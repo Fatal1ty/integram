@@ -3,7 +3,7 @@ package main
 
 import (
     "os"
-	"github.com/requilence/integram"
+	"github.com/Fatal1ty/integram"
 	// "github.com/integram-org/trello"
 	"github.com/integram-org/gitlab"
 	// "github.com/kelseyhightower/envconfig"
