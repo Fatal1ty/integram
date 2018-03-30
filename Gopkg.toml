@@ -76,5 +76,5 @@ ignored = ["github.com/gin-gonic/gin/examples/*", "golang.org/x/oauth2/google", 
 [metadata.heroku]
   root-package = "github.com/Fatal1ty/integram"
   go-version = "1.9"
-  install = [ "./..." ]
+  install = [ "./cmd/single-process-mode" ]
   ensure = "true"
