@@ -5,7 +5,7 @@ import (
     "os"
 	"github.com/Fatal1ty/integram"
 	// "github.com/integram-org/trello"
-	"github.com/integram-org/gitlab"
+	"github.com/Fatal1ty/integram-gitlab"
 	// "github.com/kelseyhightower/envconfig"
 )
 
