@@ -24,11 +24,11 @@ func main() {
 	integram.Register(
 		gitlab.Config{
 			OAuthProvider: integram.OAuthProvider{
-				ID: os.GetEnv("GITLAB_APP_ID"),
-				Secret: os.GetEnv("GITLAB_APP_SECRET"),
+				ID: os.Getenv("GITLAB_APP_ID"),
+				Secret: os.Getenv("GITLAB_APP_SECRET"),
 			},
 		},
-		os.GetEnv("TELEGRAM_BOT_TOKEN"),
+		os.Getenv("TELEGRAM_BOT_TOKEN"),
 	)
 	integram.Run()
 
